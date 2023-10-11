@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 1
   m_EditorClassIdentifier: 
   question: What is 5 * 45?
+  answers:
+  - 225
+  - 0
+  - 450
+  - 120
+  correctAnswerIndex: 0
