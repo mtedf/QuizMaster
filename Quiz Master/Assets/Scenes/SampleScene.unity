@@ -325,6 +325,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &225194978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5508522122162749857, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
+  m_PrefabInstance: {fileID: 1462258262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &457713969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -425,6 +430,11 @@ PrefabInstance:
 --- !u!224 &457713970 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5001835789995316053, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
+  m_PrefabInstance: {fileID: 457713969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &463924957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5508522122162749857, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
   m_PrefabInstance: {fileID: 457713969}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &493309737
@@ -762,6 +772,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &619165746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5508522122162749857, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
+  m_PrefabInstance: {fileID: 189683654068131219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1026033971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5001835789995316053, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
@@ -885,6 +900,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionText: {fileID: 119424686}
   question: {fileID: 11400000, guid: 1bd646ec09cff2f40b524854b150c284, type: 2}
+  answerButtons:
+  - {fileID: 619165746}
+  - {fileID: 463924957}
+  - {fileID: 1865217958}
+  - {fileID: 225194978}
 --- !u!1001 &1462258262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1090,6 +1110,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1865217958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5508522122162749857, guid: 0286b71188a95bb4992658267fcd0767, type: 3}
+  m_PrefabInstance: {fileID: 2081164530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903342517
 GameObject:
   m_ObjectHideFlags: 0
