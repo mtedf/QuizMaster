@@ -6,24 +6,61 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] QuestionSO question;
+
+    [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int intCorrectAnswerIndex;
+    bool hasAnsweredEarly;
+
+    [Header("Button Colors")]
     [SerializeField] Sprite sprDefaultAnswerSprite;
     [SerializeField] Sprite sprCorrectAnswerSprite;
+
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
+
 
 
     
     // Start is called before the first frame update
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         GetNextQuestion();
         //DisplayQuestion();
 
     }
 
+    void Update()
+    {
+        timerImage.fillAmount = timer.fltFillFraction;
+        if (timer.loadNextQuestion)
+        {
+            hasAnsweredEarly = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        }
+        else if(!hasAnsweredEarly && !timer.isAnsweringQuestion)
+        {
+            DisplayAnswer(-1);
+            SetButtonState(false);
+        }
+    }
+
     public void OnAnswerSelected(int index)
+    {
+        hasAnsweredEarly = true;
+        DisplayAnswer(index);
+        SetButtonState(false);
+        timer.CancelTimer();
+        
+    }
+
+    void DisplayAnswer(int index)
     {
         Image buttonImage;
 
@@ -42,8 +79,6 @@ public class Quiz : MonoBehaviour
             buttonImage.sprite = sprCorrectAnswerSprite;
 
         }
-        SetButtonState(false);
-        
     }
 
     void GetNextQuestion()
@@ -51,6 +86,7 @@ public class Quiz : MonoBehaviour
         SetButtonState(true);
         SetDefaultButtonSprites();
         DisplayQuestion();
+        
 
     }
 

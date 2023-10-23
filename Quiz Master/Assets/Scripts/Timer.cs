@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 
     public bool loadNextQuestion;
     
-    public bool isAnsweringQuestion = false;
+    public bool isAnsweringQuestion;
     public float fltFillFraction;
     float fltTimerValue;
 
@@ -52,6 +52,7 @@ public class Timer : MonoBehaviour
             {
                 isAnsweringQuestion = true;
                 fltTimerValue = fltTimeToCompleteQuestion;
+                loadNextQuestion = true;
             }
         }
 
